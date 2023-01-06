@@ -1,0 +1,200 @@
+* {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+}
+
+.header-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  background: #000716;
+}
+.header-wrapper .title {
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 20px;
+}
+.header-wrapper .button-container {
+  display: flex;
+  align-items: center;
+}
+.header-wrapper .button-container .border-color-button + .border-color-button {
+  margin-left: 10px;
+}
+.header-wrapper .border-color-button {
+  display: flex;
+  border: none;
+  height: 36px;
+  border-radius: 18px;
+  background: linear-gradient(60deg, #2074d5, #f46ebb);
+  color: white;
+  cursor: pointer;
+}
+.header-wrapper .border-color-button > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 30px;
+  border-radius: 18px;
+  margin: 2px;
+  background: #000716;
+  font-size: 14px;
+}
+
+.body-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: calc(100% - 200px);
+  background: #000716;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+.card-item-wrapper {
+  height: 200px;
+  width: 600px;
+  border-radius: 16px;
+  padding: 2px;
+  background: linear-gradient(60deg, #2074d5, #f46ebb);
+  box-shadow: 0 0 24px 3px #25365b;
+}
+.card-item-wrapper .card-item-container {
+  display: flex;
+  height: 100%;
+  border-radius: 16px;
+  background: #000716;
+  overflow: hidden;
+}
+.card-item-wrapper .card-item-container .image-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 400px;
+  border-radius: 16px 0 0 16px;
+  overflow: hidden;
+}
+.card-item-wrapper .card-item-container .action-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: calc(100% - 400px);
+  padding: 30px;
+}
+.card-item-wrapper .card-item-container .action-area .description {
+  color: #539fe5;
+}
+.card-item-wrapper .card-item-container .action-area .delete-button {
+  height: 36px;
+  width: 100px;
+  border-radius: 18px;
+  border: 1px solid white;
+  background: none;
+  color: white;
+  cursor: pointer;
+}
+
+.card-item-wrapper + .card-item-wrapper {
+  margin-top: 20px;
+}
+
+.dialog-wrapper {
+  display: none;
+}
+.dialog-wrapper.show {
+  display: block;
+}
+.dialog-wrapper .dim {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+.dialog-wrapper .dialog-container {
+  position: absolute;
+  width: 700px;
+  border-radius: 16px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  overflow: hidden;
+}
+.dialog-wrapper .dialog-container .dialog-body {
+  padding: 30px;
+}
+.dialog-wrapper .dialog-container .dialog-body .dialog-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #131723;
+}
+.dialog-wrapper .dialog-container .dialog-body .container {
+  padding-top: 40px;
+}
+.dialog-wrapper .dialog-container .dialog-body .input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.dialog-wrapper .dialog-container .dialog-body .input-wrapper label {
+  font-size: 16px;
+  font-weight: 400;
+  color: #505560;
+  margin-bottom: 5px;
+  padding-left: 4px;
+}
+.dialog-wrapper .dialog-container .dialog-body .input-wrapper input {
+  height: 50px;
+  border-radius: 8px;
+  border: 1px solid #e8ebec;
+  padding-left: 20px;
+}
+.dialog-wrapper .dialog-container .dialog-body .input-wrapper input:focus-visible {
+  outline: #3c82f5 auto 1px;
+}
+.dialog-wrapper .dialog-container .dialog-body .input-wrapper + .input-wrapper {
+  margin-top: 20px;
+}
+.dialog-wrapper .dialog-container .dialog-action {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 70px;
+  padding: 0 30px;
+  background: #f2f5f7;
+}
+.dialog-wrapper .dialog-container .dialog-action button {
+  height: 40px;
+  min-width: 90px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0 20px;
+  cursor: pointer;
+}
+.dialog-wrapper .dialog-container .dialog-action button + button {
+  margin-left: 12px;
+}
+.dialog-wrapper .dialog-container .dialog-action .fill-button {
+  border: none;
+  background: #3c82f5;
+  color: white;
+}
+.dialog-wrapper .dialog-container .dialog-action .line-button {
+  border: 1px solid #e4e7e9;
+  background: white;
+  color: #131723;
+}
+
+/*# sourceMappingURL=style.css.map */

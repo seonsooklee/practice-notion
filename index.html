@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="header-wrapper">
+  <div class="title">Dashboard</div>
+  <div class="button-container">
+    <div class="border-color-button" onclick="showDialog('image')">
+      <div>IMAGE</div>
+    </div>
+    <div class="border-color-button">
+      <div>VIDEO</div>
+    </div>
+    <div class="border-color-button">
+      <div>NOTE</div>
+    </div>
+    <div class="border-color-button">
+      <div>TASK</div>
+    </div>
+  </div>
+</div>
+<div id="bodyWrapper" class="body-wrapper">
+<!--  https://www.youtube.com/embed/1ZDjzJm3vPY-->
+  <div class="card-item-wrapper">
+    <div class="card-item-container">
+      <div class="image-area">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/1ZDjzJm3vPY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <div class="action-area">
+        <div class="description">${dataList[i].title} ${i}번째 아이템</div>
+        <button class="delete-button" onclick="deleteItem(${i})">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="image-dialog" class="dialog-wrapper">
+  <div class="dim"></div>
+  <div class="dialog-container">
+    <div class="dialog-body">
+      <div class="dialog-title">Add Image</div>
+      <div class="container">
+        <form>
+          <div class="input-wrapper">
+            <label for="imageTitle">Title</label>
+            <input type="text" id="imageTitle"/>
+          </div>
+          <div class="input-wrapper">
+            <label for="imageUrl">URL</label>
+            <input type="text" id="imageUrl"/>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="dialog-action">
+      <button class="line-button" onclick="closeDialog('image')">Cancel</button>
+      <button class="fill-button" onclick="addImage('image')">Add</button>
+    </div>
+  </div>
+</div>
+<div id="video-dialog" class="dialog-wrapper">
+  <div class="dim"></div>
+  <div class="dialog-container">
+    <div class="dialog-body">
+      <div class="dialog-title">Add Image</div>
+      <div class="container">
+        <form>
+          <div class="input-wrapper">
+            <label for="videoTitle">Title</label>
+            <input type="text" id="videoTitle"/>
+          </div>
+          <div class="input-wrapper">
+            <label for="videoUrl">URL</label>
+            <input type="text" id="videoUrl"/>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="dialog-action">
+      <button class="line-button" onclick="closeDialog('image')">Cancel</button>
+      <button class="fill-button">Add</button>
+    </div>
+  </div>
+</div>
+<script src="index.js"></script>
+</body>
+</html>
